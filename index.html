@@ -1,0 +1,100 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#faf6f0"><title>English Presentation Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf6f0;--card:#fff;--ink:#2a2420;--mut:#7a6f66;--acc:#c4552d;--acc2:#e9a23b;--ok:#2f8f5b;--bad:#c23b3b;--ln:#eadfd2;--r:20px;color-scheme:light}
+@media(prefers-color-scheme:dark){:root{--bg:#171310;--card:#221c18;--ink:#f3ebe3;--mut:#a89a8d;--ln:#3a312a;color-scheme:dark}}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:16px/1.5 Inter,system-ui,sans-serif;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom);min-height:100vh;background-image:radial-gradient(600px 300px at 90% -5%,#e9a23b33,transparent),radial-gradient(500px 300px at -10% 10%,#c4552d22,transparent)}
+.w{max-width:760px;margin:0 auto;padding:16px}
+header{display:flex;align-items:center;gap:12px;padding:8px 0 4px}
+.logo{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--acc),var(--acc2));display:grid;place-items:center;color:#fff;font:700 20px Fraunces,Georgia,serif;cursor:pointer;transition:transform .2s;user-select:none}.logo:active{transform:scale(.88) rotate(-6deg)}
+h1,h2{font-family:Fraunces,Georgia,serif;margin:0;letter-spacing:-.02em}h1{font-size:clamp(30px,8vw,46px);line-height:1.05}h2{font-size:22px}
+.brand b{font:700 17px Fraunces,Georgia,serif;display:block;line-height:1.1}.brand span{font-size:12px;color:var(--mut)}
+.card{background:var(--card);border:1px solid var(--ln);border-radius:var(--r);padding:20px;margin:14px 0;box-shadow:0 6px 24px #3b241410;animation:up .5s cubic-bezier(.2,.8,.2,1) both}
+.card:nth-child(2){animation-delay:.06s}.card:nth-child(3){animation-delay:.12s}.card:nth-child(4){animation-delay:.18s}
+@keyframes up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.hero{padding:34px 0 8px}.hero p{color:var(--mut);margin:10px 0 0}
+input,textarea{width:100%;font:inherit;color:inherit;background:var(--bg);border:1.5px solid var(--ln);border-radius:14px;padding:14px 16px;outline:0;transition:border .2s,box-shadow .2s}
+input:focus,textarea:focus{border-color:var(--acc);box-shadow:0 0 0 4px #c4552d22}textarea{resize:vertical;min-height:84px}
+.btn{border:0;font:600 16px Inter,sans-serif;color:#fff;background:linear-gradient(135deg,var(--acc),#d9743a);padding:14px 22px;border-radius:14px;cursor:pointer;min-height:48px;transition:transform .15s,box-shadow .2s,opacity .2s;box-shadow:0 8px 18px #c4552d44}.btn:active{transform:scale(.96)}.btn:disabled{opacity:.5}
+.btn.g{background:var(--bg);color:var(--ink);box-shadow:none;border:1.5px solid var(--ln)}.btn.s{padding:8px 14px;min-height:36px;font-size:14px;box-shadow:none}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.row>*{flex:1 1 auto}
+.pill{display:inline-block;font:600 12px Inter;padding:5px 11px;border-radius:99px;background:#e9a23b33;color:#a86a05}.pill.APPROVED{background:#2f8f5b22;color:var(--ok)}.pill.REJECTED{background:#c23b3b22;color:var(--bad)}
+.steps{display:flex;gap:6px;margin:6px 0 4px}.steps i{flex:1;height:6px;border-radius:9px;background:var(--ln);overflow:hidden;position:relative}.steps i.on:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--acc),var(--acc2));animation:fill .8s ease both}@keyframes fill{from{transform:translateX(-100%)}}
+.lbl{font-size:12px;color:var(--mut);display:flex;justify-content:space-between}
+.how{display:grid;grid-template-columns:1fr 1fr;gap:10px}.how div{background:var(--bg);border-radius:16px;padding:14px;font-size:14px}.how b{display:block;font:700 22px Fraunces,Georgia,serif;color:var(--acc)}
+.sk{height:18px;border-radius:9px;background:linear-gradient(90deg,var(--ln),var(--bg),var(--ln));background-size:200% 100%;animation:sh 1.2s infinite;margin:10px 0}@keyframes sh{to{background-position:-200% 0}}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom));transform:translate(-50%,30px);background:var(--ink);color:var(--bg);padding:12px 18px;border-radius:14px;opacity:0;transition:.35s;z-index:9;max-width:90%;font-size:14px}.toast.on{opacity:1;transform:translate(-50%,0)}
+.mut{color:var(--mut);font-size:14px}.hide{display:none!important}
+.it{border-top:1px solid var(--ln);padding:14px 0}.it:first-child{border:0}.it b{display:block}
+iframe{width:100%;height:60vh;border:0;border-radius:14px;margin-top:10px;background:var(--bg)}
+.bar{height:8px;border-radius:9px;background:var(--ln);margin-top:10px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:var(--acc);transition:width .3s}
+footer{text-align:center;color:var(--mut);font-size:12px;padding:24px 0}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style></head><body><div class="w">
+<header><div class="logo" id="logo">E</div><div class="brand"><b>English Presentation Hub</b><span>Topic · Approval · PPT</span></div><button class="btn g s hide" id="out" style="flex:0;margin-left:auto">Logout</button></header>
+<main id="app"></main>
+<footer>© English Presentation Hub · SVES</footer></div><div class="toast" id="t"></div>
+<script>
+const SB="https://ohgfshgctsldhqtxeuao.supabase.co/rest/v1",KEY="sb_publishable_KOdHvsS8slw3sSvGbjuchQ_Ila2PjJq",GAS="https://script.google.com/macros/s/AKfycbyEJmWhoRgEHpRoGPJoaLftwjetZ_r5L6ANFUMJoupfyDUfnAV5vzck_Mw4aUyTcSUi/exec",AH="72420296255777aa92b0937b6f643d904f24ec22fac6677875c51e72b7fc68bd";
+const $=s=>document.querySelector(s),app=$("#app");let S={stu:null,topic:null,ppt:null,dl:null},poll;
+const H={apikey:KEY,Authorization:"Bearer "+KEY,"Content-Type":"application/json",Prefer:"return=representation"};
+async function api(p,o={}){const r=await fetch(SB+p,{headers:H,...o});if(!r.ok)throw new Error(await r.text());return r.status==204?[]:r.json()}
+function toast(m){const t=$("#t");t.textContent=m;t.classList.add("on");clearTimeout(t._);t._=setTimeout(()=>t.classList.remove("on"),3200)}
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const sk='<div class="card"><div class="sk" style="width:60%"></div><div class="sk"></div><div class="sk" style="width:80%"></div></div>';
+async function busy(b,f){b.disabled=true;try{await f()}catch(e){console.error(e);toast("Something went wrong. Please try again.")}b.disabled=false}
+/* HOME */
+function home(){clearInterval(poll);$("#out").classList.add("hide");app.innerHTML=`<section class="hero card" style="background:none;border:0;box-shadow:none;padding:30px 0 0"><h1>Your presentation journey starts here.</h1><p>Submit your topic, track its approval, and upload your PowerPoint — all in one place.</p></section>
+<div class="card"><label class="lbl" for="rn"><span>Enter the last two digits of your roll number</span></label><div class="row"><input id="rn" inputmode="text" maxlength="4" autocomplete="off" placeholder="e.g. D3 or 67" style="flex:2 1 160px"><button class="btn" id="go">Continue</button></div><p class="mut" id="who" style="margin:12px 0 0"></p></div>
+<div class="card"><h2>How it works</h2><div class="how" style="margin-top:12px"><div><b>1</b>Enter your roll number</div><div><b>2</b>Submit your topic</div><div><b>3</b>Get it approved</div><div><b>4</b>Upload your PPT</div></div></div><div class="card" id="dl"><div class="sk" style="width:50%"></div></div>`;
+ deadline().then(d=>{$("#dl")&&($("#dl").innerHTML=`<h2>Submission deadline</h2><p class="mut" style="margin:6px 0 0">${d?(new Date(d)<new Date()?"The submission deadline has passed.":"Closes "+new Date(d).toLocaleString([], {dateStyle:"medium",timeStyle:"short"})):"No deadline set yet."}</p>`)}).catch(()=>{});
+ $("#go").onclick=e=>busy(e.target,async()=>{const v=$("#rn").value.trim();if(v.length<2)return toast("Enter at least 2 characters");
+  const r=await api(`/students?full_roll_number=ilike.*${encodeURIComponent(v)}&is_active=eq.true&select=*`);
+  if(!r.length)return $("#who").textContent="We couldn't find a student matching those details. Please check your roll number.";
+  if(r.length>1)return $("#who").textContent="More than one student matches. Type 3–4 characters of your roll number.";
+  localStorage.setItem("eph",r[0].id);S.stu=r[0];dash()})}
+async function deadline(){const r=await api("/admin_settings?select=submission_deadline&limit=1");return S.dl=r[0]?.submission_deadline}
+/* DASHBOARD */
+async function dash(){$("#out").classList.remove("hide");app.innerHTML=sk;poll=setInterval(()=>load(),15000);await load()}
+async function load(){try{const id=S.stu.id;const[t,p,d]=await Promise.all([api(`/topics?student_id=eq.${id}&order=submitted_at.desc&limit=1`),api(`/ppt_files?student_id=eq.${id}&is_current=eq.true&limit=1`),deadline()]);S.topic=t[0]||null;S.ppt=p[0]||null;draw()}catch(e){app.innerHTML='<div class="card">Database unavailable. <button class="btn s" onclick="load()">Retry</button></div>'}}
+function draw(){const{stu,topic:t,ppt:p,dl}=S,st=t?.status||"NONE",late=dl&&new Date(dl)<new Date(),step=!t?1:st!="APPROVED"?2:!p?3:4;
+ const msg={NONE:"Welcome! Enter your presentation topic to get started.",PENDING:"Your topic has been submitted and is waiting for approval.",AI_REVIEW:"Your topic is being reviewed.",APPROVED:p?"Your PowerPoint has been uploaded successfully.":"Congratulations! Your topic is approved. Upload your PowerPoint to finish.",REJECTED:"Your topic needs revision. Check the feedback and submit a new topic.",REVISION:"Your topic needs some changes. Review the feedback and update it."}[st]||"";
+ const canEdit=!late&&st!="APPROVED";
+ app.innerHTML=`<div class="card"><div class="lbl"><span>${esc(stu.full_roll_number)}</span>${t?`<span class="pill ${st}">${st}</span>`:""}</div><h2 style="margin:6px 0 12px">Hi, ${esc(stu.student_name.split(" ")[0])} 👋</h2>
+ <div class="steps">${[1,2,3,4].map(i=>`<i class="${i<=step?"on":""}" style="--d:${i}"></i>`).join("")}</div><div class="lbl"><span>Topic</span><span>Approval</span><span>Upload</span><span>Done</span></div><p style="margin:14px 0 0">${late&&!p?"The submission deadline has passed. Contact the administrator if you need assistance.":msg}</p>${t?.admin_feedback?`<p class="mut">Feedback: ${esc(t.admin_feedback)}</p>`:""}</div>
+ <div class="card"><h2>Presentation topic</h2>${canEdit?`<div style="margin-top:12px"><input id="ti" maxlength="140" placeholder="Your topic" value="${esc(t?.topic_title)}"><textarea id="td" placeholder="Short description (optional)" style="margin-top:10px">${esc(t?.topic_description)}</textarea><div class="row"><button class="btn" id="sub">${t?"Update topic":"Submit topic for approval"}</button></div></div>`:`<p style="margin:10px 0 0"><b>${esc(t?.topic_title)}</b></p><p class="mut">${esc(t?.topic_description)}</p>`}</div>
+ ${st=="APPROVED"?`<div class="card"><h2>Your PPT</h2>${p?`<p class="mut" style="margin:8px 0">${esc(p.original_filename)} · ${(p.file_size/1048576).toFixed(1)} MB</p><div class="row"><button class="btn g s" id="pv">Preview</button><a class="btn g s" style="text-align:center;text-decoration:none;color:inherit" href="https://drive.google.com/uc?export=download&id=${p.google_drive_file_id}">Download</a></div><div id="fr"></div>`:""}
+ ${late?"":`<div class="row"><input type="file" id="f" accept=".ppt,.pptx" class="hide"><button class="btn" id="up">${p?"Replace PPT":"Upload PPT"}</button></div><div class="bar hide" id="bar"><i></i></div>`}</div>`:""}`;
+ $("#sub")&&($("#sub").onclick=e=>busy(e.target,submitTopic));
+ $("#pv")&&($("#pv").onclick=()=>$("#fr").innerHTML=`<iframe src="https://drive.google.com/file/d/${p.google_drive_file_id}/preview" allow="autoplay"></iframe>`);
+ $("#up")&&($("#up").onclick=()=>$("#f").click(),$("#f").onchange=e=>busy($("#up"),()=>upload(e.target.files[0])))}
+async function submitTopic(){const title=$("#ti").value.trim();if(title.length<5)return toast("Please enter a clearer topic");
+ const dup=await api(`/topics?topic_title=ilike.${encodeURIComponent(title)}&status=in.(PENDING,APPROVED)&select=id,student_id`);
+ if(dup.some(x=>x.student_id!=S.stu.id))return toast("This topic may be similar to an existing submission.");
+ const body={topic_title:title,topic_description:$("#td").value.trim(),status:"PENDING",admin_feedback:null,submitted_at:new Date().toISOString()};
+ S.topic?await api(`/topics?id=eq.${S.topic.id}`,{method:"PATCH",body:JSON.stringify(body)}):await api("/topics",{method:"POST",body:JSON.stringify({...body,student_id:S.stu.id})});
+ toast("Topic submitted ✓");await load()}
+async function upload(f){if(!f)return;if(!/\.pptx?$/i.test(f.name)||f.size>25*1048576)return toast("Choose a .ppt/.pptx file under 25 MB");
+ const bar=$("#bar");bar.classList.remove("hide");const i=bar.firstChild;i.style.width="15%";
+ const data=await new Promise((ok,no)=>{const r=new FileReader();r.onload=()=>ok(r.result.split(",")[1]);r.onerror=no;r.readAsDataURL(f)});i.style.width="45%";
+ const res=await(await fetch(GAS,{method:"POST",body:JSON.stringify({roll:S.stu.full_roll_number,name:f.name,mime:f.type||"application/vnd.ms-powerpoint",data})})).json();
+ if(!res.ok||!res.id){bar.classList.add("hide");return toast("Upload failed. Your previous PPT is unchanged.")}i.style.width="85%";
+ await api(`/ppt_files?student_id=eq.${S.stu.id}&is_current=eq.true`,{method:"PATCH",body:JSON.stringify({is_current:false})});
+ await api("/ppt_files",{method:"POST",body:JSON.stringify({student_id:S.stu.id,topic_id:S.topic.id,original_filename:f.name,google_drive_file_id:res.id,mime_type:f.type,file_size:f.size,is_current:true,upload_status:"DONE"})});
+ i.style.width="100%";toast("Your PowerPoint was saved ✓");await load()}
+/* ADMIN */
+let taps=0,tt;$("#logo").onclick=()=>{taps++;clearTimeout(tt);tt=setTimeout(()=>taps=0,1500);if(taps>=7){taps=0;adminLogin()}};
+function adminLogin(){clearInterval(poll);app.innerHTML=`<div class="card"><h2>Admin access</h2><div class="row"><input id="pw" type="password" placeholder="Password"><button class="btn" id="ok">Enter</button></div></div>`;
+ $("#ok").onclick=async e=>{const h=[...new Uint8Array(await crypto.subtle.digest("SHA-256",new TextEncoder().encode($("#pw").value)))].map(b=>b.toString(16).padStart(2,"0")).join("");h===AH?(sessionStorage.adm=1,admin()):toast("Incorrect password")}}
+async function admin(){$("#out").classList.remove("hide");app.innerHTML=sk;const[t,p,d]=await Promise.all([api("/topics?select=*,students(full_roll_number,student_name)&order=submitted_at.desc"),api("/ppt_files?is_current=eq.true"),deadline()]);
+ const c=s=>t.filter(x=>x.status==s).length,pm=Object.fromEntries(p.map(x=>[x.student_id,x]));
+ app.innerHTML=`<div class="card"><h2>Overview</h2><div class="how" style="margin-top:12px"><div><b>${t.length}</b>Topics</div><div><b>${c("PENDING")}</b>Pending</div><div><b>${c("APPROVED")}</b>Approved</div><div><b>${p.length}</b>PPTs uploaded</div></div></div>
+ <div class="card"><h2>Deadline</h2><div class="row"><input type="datetime-local" id="dd" value="${d?new Date(d).toISOString().slice(0,16):""}"><button class="btn" id="sd">Save</button></div></div>
+ <div class="card"><h2>Topics</h2>${t.map(x=>{const f=pm[x.student_id];return`<div class="it"><span class="pill ${x.status}">${x.status}</span> <b>${esc(x.topic_title)}</b><span class="mut">${esc(x.students?.student_name)} · ${esc(x.students?.full_roll_number)}</span><div class="row"><button class="btn s" data-a="APPROVED" data-i="${x.id}">Approve</button><button class="btn g s" data-a="REJECTED" data-i="${x.id}">Reject</button><button class="btn g s" data-a="PENDING" data-i="${x.id}">Pending</button>${f?`<a class="btn g s" style="text-align:center;text-decoration:none;color:inherit" target="_blank" href="https://drive.google.com/uc?export=download&id=${f.google_drive_file_id}">PPT ↓</a>`:""}</div></div>`}).join("")||'<p class="mut">No topics yet.</p>'}</div>`;
+ $("#sd").onclick=async()=>{const v=new Date($("#dd").value).toISOString();const r=await api("/admin_settings?id=eq.1",{method:"PATCH",body:JSON.stringify({submission_deadline:v})});r.length||await api("/admin_settings",{method:"POST",body:JSON.stringify({id:1,submission_deadline:v})});toast("Deadline saved ✓")};
+ app.querySelectorAll("[data-a]").forEach(b=>b.onclick=()=>busy(b,async()=>{const a=b.dataset.a;let fb=null;if(a=="REJECTED"){fb=prompt("Reason for rejection?");if(!fb)return}
+  await api(`/topics?id=eq.${b.dataset.i}`,{method:"PATCH",body:JSON.stringify({status:a,admin_feedback:fb,...(a=="APPROVED"?{approved_at:new Date().toISOString()}:{})})});toast("Updated ✓");admin()}))}
+$("#out").onclick=()=>{localStorage.removeItem("eph");sessionStorage.removeItem("adm");S={stu:null};home()};
+(async()=>{if(sessionStorage.adm)return admin();const id=localStorage.eph;if(id){app.innerHTML=sk;try{const r=await api(`/students?id=eq.${id}&select=*`);if(r[0]){S.stu=r[0];return dash()}}catch(e){}}home()})();
+</script></body></html>
